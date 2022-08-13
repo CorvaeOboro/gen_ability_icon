@@ -20,7 +20,7 @@ create ability icon images , a circular workflow of refinement using procgen aug
 - create new seeds using this notebook : colab link
 
 # PROCGEN
-- houdini hda tool , GEN_ABILITY_ICON.hda , generates 3d randomized icons from archetypes ( slash , shatter , splatter ) 
+- houdini hda tool , z_ITEM_ABILITY_ICON.hda , generates 3d randomized icons from archetypes ( slash , shatter , splatter ) 
 - included houdini/GEN_ABILITY_ICON.hip file setup with [PDG TOPs](https://www.sidefx.com/products/pdg/) , renders randomized wedging  
 - utilizes [SideFXLabs](https://github.com/sideeffects/SideFXLabs) hda tools and [ZENV](https://github.com/CorvaeOboro/zenv) hda tools 
 - focused on volumetric lighting , metallic material , randomized vertex color
