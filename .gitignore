@@ -8,3 +8,6 @@
 *00_BATCH_JPG_SIZE.bat
 *00_BATCH_PNG_TO_JPG.bat
 *00_png_delete.bat
+*00_gen_ability_icon_readme.bat
+*00_gen_ability_icon_readme.py
+*00_python_rename_all_01.py
