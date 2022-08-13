@@ -1,0 +1,10 @@
+**/pdgtemp/**
+**/datasets/**
+**/backup/**
+**/stylegan2/**
+*Thumbs.db
+*.exr
+*.mantra_checkpoint
+*00_BATCH_JPG_SIZE.bat
+*00_BATCH_PNG_TO_JPG.bat
+*00_png_delete.bat
