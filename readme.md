@@ -112,7 +112,7 @@ many thanks to
 ```
 
 # ATTRIBUTION
-- these icons were initially apart of the training dataset tho not included in the current set :
+- the following icons were initially apart of the training dataset tho not included in the current set :
 - J. W. Bjerk (eleazzaar) -- www.jwbjerk.com/art  ( CreativeCommons 3.0 )
 - Lorc ( CreativeCommons 3.0 )
 
