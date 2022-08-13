@@ -1,9 +1,9 @@
 # GEN_ABILITY_ICON
 create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
 - [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icons/archive/refs/heads/master.zip ) |  [VIEW ICONS](https://github.com/CorvaeOboro/gen_ability_icon/icons) |  [INSTALL](https://github.com/CorvaeOboro/gen_ability_icon#install)
-- procedurally generated 3d renders using  [SideFX's Houdini](https://www.sidefx.com/) tools and Procedural Dependency Graph Task Operators  ( [PDG TOPs](https://www.sidefx.com/products/pdg/) )
+- procedurally generated 3d renders using  [SideFX's Houdini](https://www.sidefx.com/) tools and [PDG TOPs](https://www.sidefx.com/products/pdg/) 
 - mutated by text-to-image guided neural networks (  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers) )
-- cultivated dataset trains a generative adversarial network to explore and select from the latent space (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
+- cultivated dataset trained generative adversarial network to explore (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
 
 ![00_icon_gen_20220407_comp](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true "00_icon_gen_20220407_comp")
 
@@ -20,7 +20,7 @@ create ability icon images , a circular workflow of refinement using procgen aug
 - create new seeds using this notebook : colab link
 
 # PROCGEN
-- houdini hda tool , z_ITEM_ABILITY_ICON.hda , generates 3d randomized icons from archetypes ( slash , shatter , splatter ) 
+- houdini hda tool , z_ITEM_ABILITY_ICON.hda , generates 3d randomized icons of types ( slash , shatter , splatter ) 
 - included houdini/GEN_ABILITY_ICON.hip file setup with [PDG TOPs](https://www.sidefx.com/products/pdg/) , renders randomized wedging  
 - utilizes [SideFXLabs](https://github.com/sideeffects/SideFXLabs) hda tools and [ZENV](https://github.com/CorvaeOboro/zenv) hda tools 
 - focused on volumetric lighting , metallic material , randomized vertex color
@@ -31,7 +31,8 @@ create ability icon images , a circular workflow of refinement using procgen aug
 
 # GUIDED MUTATION / REMIXING
 - with initial set of procgen selected , expand the dataset and alter using various techniques :
--  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input image , similar to text based styletransfer 
+-  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input image , similar to text based styletransfer . 
+- text prompts used for text guided image mutation included in [prompts_list.txt](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt)
 - IMAGE_COLLAGE.py - given a folder of images randomly composites them with randomized hue / brightness / normalization 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
