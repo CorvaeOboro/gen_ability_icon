@@ -14,24 +14,117 @@ body {
 </style></head>
 
 <body>
-<video controls autoplay loop width="1500">
-  <source src="Ground_Materials.mp4" type="video/mp4" >
-   browser does not support the video tag.
-</video><br><br><br>
 
-<img src="Ground_Materials_01.jpg" width="1500"><br><br><br>
-<img src="Ground_Materials_02.jpg" width="1500"><br><br><br>
 
-<img src="Ground_Materials_03.jpg" width="1500"><br><br><br>
-<img src="Ground_Materials_04.jpg" width="1500"><br><br><br>
+<h1>GEN_ABILITY_ICON</h1>
+<p>create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
+- <a href="https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip">DOWNLOAD ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons">VIEW ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon#install">INSTALL</a>
+- procedurally generated 3d renders using  <a href="https://www.sidefx.com/">SideFX's Houdini</a> tools and <a href="https://www.sidefx.com/products/pdg/">PDG TOPs</a> 
+- mutated by text-to-image guided neural networks (  <a href="https://github.com/CompVis/taming-transformers">VQGAN+CLIP</a> )
+- cultivated dataset trained generative adversarial network to explore (  <a href="https://github.com/NVlabs/stylegan2-ada">STYLEGAN2ADA</a> )</p>
+<p><img alt="00_icon_gen_20220407_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true" title="00_icon_gen_20220407_comp" /></p>
+<p><img alt="00_icon_gen2_compA" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_process.jpg?raw=true" title="00_icon_gen2_compA" /></p>
+<h1>IMAGE DATASET</h1>
+<ul>
+<li>a synthetic image dataset of circular magic ability icons</li>
+<li>collection of favored ability icons generated free to all </li>
+<li><a href="https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip">DOWNLOAD ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons">VIEW ICONS</a></li>
+</ul>
+<h1>STYLEGAN2ADA CHECKPOINT</h1>
+<ul>
+<li>a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.</li>
+<li>there is much to explore in 512-dimensional latent space , may you find favored .</li>
+<li>create new seeds using this notebook : <a href="https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></li>
+<li><a href="https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20220801/gen_ability_icon_stylegan2ada_20220801.pkl">DOWNLOAD CHECKPOINT PKL</a> |  <a href="https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0">GENERATE USING COLAB</a></li>
+</ul>
+<h1>PROCGEN</h1>
+<ul>
+<li>houdini hda tool , z_ITEM_ABILITY_ICON.hda , generates 3d randomized icons of types ( slash , shatter , splatter ) </li>
+<li>included houdini/GEN_ABILITY_ICON.hip file setup with <a href="https://www.sidefx.com/products/pdg/">PDG TOPs</a> , renders randomized wedging  </li>
+<li>utilizes <a href="https://github.com/sideeffects/SideFXLabs">SideFXLabs</a> hda tools and <a href="https://github.com/CorvaeOboro/zenv">ZENV</a> hda tools </li>
+<li>focused on volumetric lighting , metallic material , randomized vertex color</li>
+</ul>
+<p><img alt="gen_ability_icon_pdg_02" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_pdg_02.jpg?raw=true" title="gen_ability_icon_pdg_02" /></p>
+<p><img alt="00_icon_procgen_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_procgen_comp.jpg?raw=true" title="00_icon_procgen_comp" /></p>
+<h1>GUIDED MUTATION / REMIXING</h1>
+<ul>
+<li>with initial set of procgen selected , expand the dataset and alter using various techniques :</li>
+<li> <a href="https://github.com/CompVis/taming-transformers">VQGAN+CLIP</a>  - text-to-image guided modification of input image , similar to text based styletransfer . </li>
+<li>text prompts used for text guided image mutation included in <a href="https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt">prompts_list.txt</a></li>
+<li>IMAGE_COLLAGE.py - given a folder of images randomly composites them with randomized hue / brightness / normalization </li>
+</ul>
+<p><img alt="00_icon_gen2_compB" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true" title="00_icon_gen2_compB" /></p>
+<h1>INSTALL</h1>
+<p>```.bash</p>
+<h1>create anaconda env from included environment.yml</h1>
+<p>git clone 'https://github.com/CorvaeOboro/gen_ability_icon'
+cd gen_ability_icon
+conda env create --prefix venv -f environment.yml
+conda activate venv</p>
+<h1>clone STYLEGAN2ADA</h1>
+<p>git clone 'https://github.com/NVlabs/stylegan2-ada'</p>
+<h1>clone VQGAN+CLIP</h1>
+<p>git clone 'https://github.com/openai/CLIP'
+git clone 'https://github.com/CompVis/taming-transformers'</p>
+<h1>download VQGAN checkpoint imagenet 16k</h1>
+<p>mkdir checkpoints
+curl -L -o checkpoints/vqgan_imagenet_f16_16384.yaml -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fconfigs%2Fmodel.yaml&amp;dl=1' #ImageNet 16384
+curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fckpts%2Flast.ckpt&amp;dl=1' #ImageNet 16384</p>
+<p>```</p>
+<h1>WORKFLOW</h1>
+<ul>
+<li>generate procgen renders from houdini , selecting favored renders</li>
+<li>mutate those renders via text guided VQGAN+CLIP </li>
+<li>combine the renders and mutants via random collaging </li>
+<li>select the favored icons to create a stylegan2 dataset </li>
+<li>train stylegan2 network , then generate seeds from trained checkpoint</li>
+<li>cultivate the complete dataset thru selection and art direction adjustments </li>
+<li>repeat to expand and refine by additional text guided mutation , retraining , regenerating</li>
+</ul>
+<h1>THANKS</h1>
+<p>many thanks to 
+- NVIDIA NVLabs - https://github.com/NVlabs/stylegan2-ada
+- CLIP - https://github.com/openai/CLIP
+- VQGAN - https://github.com/CompVis/taming-transformers
+- Katherine Crowson : <a href="https://github.com/crowsonkb">https://github.com/crowsonkb</a>  https://arxiv.org/abs/2204.08583
+- NerdyRodent : https://github.com/nerdyrodent/VQGAN-CLIP</p>
+<h1>AKNOWLEDGEMENTS</h1>
+<p><code>@inproceedings{Karras2020ada,
+  title     = {Training Generative Adversarial Networks with Limited Data},
+  author    = {Tero Karras and Miika Aittala and Janne Hellsten and Samuli Laine and Jaakko Lehtinen and Timo Aila},
+  booktitle = {Proc. NeurIPS},
+  year      = {2020}
+}</code>
+<code>@misc{esser2020taming,
+      title={Taming Transformers for High-Resolution Image Synthesis}, 
+      author={Patrick Esser and Robin Rombach and Björn Ommer},
+      year={2020},
+      eprint={2012.09841},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code>
+<code>@misc{https://doi.org/10.48550/arxiv.2103.00020,
+  doi = {10.48550/ARXIV.2103.00020},
+  url = {https://arxiv.org/abs/2103.00020},
+  author = {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Learning Transferable Visual Models From Natural Language Supervision},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}</code></p>
+<h1>ATTRIBUTION</h1>
+<ul>
+<li>the following icons were initially apart of the training dataset :</li>
+<li>J. W. Bjerk (eleazzaar) -- www.jwbjerk.com/art  ( CreativeCommons 3.0 )</li>
+<li>Lorc -- https://game-icons.net/ ( CreativeCommons 3.0 ) </li>
+</ul>
+<h1>CREATIVE COMMONS ZERO</h1>
+<p>free to all , <a href="https://creativecommons.org/publicdomain/zero/1.0/">creative commons CC0</a> , free to redistribute , no attribution required</p>
 
-<img src="Ground_Materials_05.jpg" width="1500"><br><br><br>
-<img src="Ground_Materials_06.jpg" width="1500"><br><br><br>
 
-<img src="Ground_Materials_07.jpg" width="1500"><br><br><br>
-<img src="Ground_Materials_08.jpg" width="1500"><br><br><br>
 
-<img src="Ground_Materials_09.jpg" width="1500"><br><br><br>
+
 
 </body>
 </html>
