@@ -15,9 +15,9 @@ create ability icon images , a circular workflow of refinement using procgen aug
 - [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons)
 
 # STYLEGAN2ADA CHECKPOINT
-- a stylegan2 network checkpoint trained on synthetic 256x256 images of generated selections .
+- a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.
 - there is much to explore in 512-dimensional latent space , may you find favored .
-- create new seeds using this notebook : [COLAB](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=1#scrollTo=t-prE54KutXG)
+- create new seeds using this notebook : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=1#scrollTo=t-prE54KutXG)
 - [DOWNLOAD CHECKPOINT PKL](https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20220801/gen_ability_icon_stylegan2ada_20220801.pkl ) |  [GENERATE USING COLAB](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=1#scrollTo=t-prE54KutXG)
 
 # PROCGEN
@@ -111,9 +111,9 @@ many thanks to
 ```
 
 # ATTRIBUTION
-- the following icons were initially apart of the training dataset tho not included in the current set :
+- the following icons were initially apart of the training dataset :
 - J. W. Bjerk (eleazzaar) -- www.jwbjerk.com/art  ( CreativeCommons 3.0 )
-- Lorc ( CreativeCommons 3.0 )
+- Lorc -- https://game-icons.net/ ( CreativeCommons 3.0 ) 
 
 # CREATIVE COMMONS ZERO 
 free to all , [creative commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) , free to redistribute , no attribution required
