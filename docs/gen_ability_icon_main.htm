@@ -18,12 +18,12 @@ body {
 
 <h1>GEN_ABILITY_ICON</h1>
 <p>create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
-- <a href="https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip">DOWNLOAD ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons">VIEW ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon#install">INSTALL</a>
-- procedurally generated 3d renders using  <a href="https://www.sidefx.com/">SideFX's Houdini</a> tools and <a href="https://www.sidefx.com/products/pdg/">PDG TOPs</a> 
-- mutated by text-to-image guided neural networks (  <a href="https://github.com/CompVis/taming-transformers">VQGAN+CLIP</a> )
-- cultivated dataset trained generative adversarial network to explore (  <a href="https://github.com/NVlabs/stylegan2-ada">STYLEGAN2ADA</a> )</p>
-<p><img alt="00_icon_gen_20220407_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true" title="00_icon_gen_20220407_comp" /></p>
-<p><img alt="00_icon_gen2_compA" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_process.jpg?raw=true" title="00_icon_gen2_compA" /></p>
+<br>- <a href="https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip">DOWNLOAD ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons">VIEW ICONS</a> |  <a href="https://github.com/CorvaeOboro/gen_ability_icon#install">INSTALL</a>
+<br>- procedurally generated 3d renders using  <a href="https://www.sidefx.com/">SideFX's Houdini</a> tools and <a href="https://www.sidefx.com/products/pdg/">PDG TOPs</a> 
+<br>- mutated by text-to-image guided neural networks (  <a href="https://github.com/CompVis/taming-transformers">VQGAN+CLIP</a> )
+<br>- cultivated dataset trained generative adversarial network to explore (  <a href="https://github.com/NVlabs/stylegan2-ada">STYLEGAN2ADA</a> )</p>
+<p><img alt="00_icon_gen_20220407_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true" width="800" title="00_icon_gen_20220407_comp" /></p>
+<p><img alt="00_icon_gen2_compA" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_process.jpg?raw=true" width="800" title="00_icon_gen2_compA" /></p>
 <h1>IMAGE DATASET</h1>
 <ul>
 <li>a synthetic image dataset of circular magic ability icons</li>
@@ -44,8 +44,8 @@ body {
 <li>utilizes <a href="https://github.com/sideeffects/SideFXLabs">SideFXLabs</a> hda tools and <a href="https://github.com/CorvaeOboro/zenv">ZENV</a> hda tools </li>
 <li>focused on volumetric lighting , metallic material , randomized vertex color</li>
 </ul>
-<p><img alt="gen_ability_icon_pdg_02" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_pdg_02.jpg?raw=true" title="gen_ability_icon_pdg_02" /></p>
-<p><img alt="00_icon_procgen_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_procgen_comp.jpg?raw=true" title="00_icon_procgen_comp" /></p>
+<p><img alt="gen_ability_icon_pdg_02" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_pdg_02.jpg?raw=true" width="800" title="gen_ability_icon_pdg_02" /></p>
+<p><img alt="00_icon_procgen_comp" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_procgen_comp.jpg?raw=true" width="800" title="00_icon_procgen_comp" /></p>
 <h1>GUIDED MUTATION / REMIXING</h1>
 <ul>
 <li>with initial set of procgen selected , expand the dataset and alter using various techniques :</li>
@@ -53,24 +53,24 @@ body {
 <li>text prompts used for text guided image mutation included in <a href="https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt">prompts_list.txt</a></li>
 <li>IMAGE_COLLAGE.py - given a folder of images randomly composites them with randomized hue / brightness / normalization </li>
 </ul>
-<p><img alt="00_icon_gen2_compB" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true" title="00_icon_gen2_compB" /></p>
-<h1>INSTALL</h1>
-<p>```.bash</p>
-<h1>create anaconda env from included environment.yml</h1>
-<p>git clone 'https://github.com/CorvaeOboro/gen_ability_icon'
+<p><img alt="00_icon_gen2_compB" src="https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true" width="800" title="00_icon_gen2_compB" /></p>
+<h1>INSTALL</h1><br>
+<p><code>
+create anaconda env from included environment.yml
+git clone 'https://github.com/CorvaeOboro/gen_ability_icon'
 cd gen_ability_icon
 conda env create --prefix venv -f environment.yml
-conda activate venv</p>
-<h1>clone STYLEGAN2ADA</h1>
-<p>git clone 'https://github.com/NVlabs/stylegan2-ada'</p>
-<h1>clone VQGAN+CLIP</h1>
-<p>git clone 'https://github.com/openai/CLIP'
-git clone 'https://github.com/CompVis/taming-transformers'</p>
-<h1>download VQGAN checkpoint imagenet 16k</h1>
-<p>mkdir checkpoints
+conda activate venv
+clone STYLEGAN2ADA
+git clone 'https://github.com/NVlabs/stylegan2-ada'
+clone VQGAN+CLIP<
+git clone 'https://github.com/openai/CLIP'
+git clone 'https://github.com/CompVis/taming-transformers'
+download VQGAN checkpoint imagenet 16k
+mkdir checkpoints
 curl -L -o checkpoints/vqgan_imagenet_f16_16384.yaml -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fconfigs%2Fmodel.yaml&amp;dl=1' #ImageNet 16384
-curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fckpts%2Flast.ckpt&amp;dl=1' #ImageNet 16384</p>
-<p>```</p>
+curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fckpts%2Flast.ckpt&amp;dl=1' #ImageNet 16384
+</code></p><br>
 <h1>WORKFLOW</h1>
 <ul>
 <li>generate procgen renders from houdini , selecting favored renders</li>
@@ -83,26 +83,26 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 </ul>
 <h1>THANKS</h1>
 <p>many thanks to 
-- NVIDIA NVLabs - https://github.com/NVlabs/stylegan2-ada
-- CLIP - https://github.com/openai/CLIP
-- VQGAN - https://github.com/CompVis/taming-transformers
-- Katherine Crowson : <a href="https://github.com/crowsonkb">https://github.com/crowsonkb</a>  https://arxiv.org/abs/2204.08583
-- NerdyRodent : https://github.com/nerdyrodent/VQGAN-CLIP</p>
+<br>- NVIDIA NVLabs - https://github.com/NVlabs/stylegan2-ada
+<br>- CLIP - https://github.com/openai/CLIP
+<br>- VQGAN - https://github.com/CompVis/taming-transformers
+<br>- Katherine Crowson : <a href="https://github.com/crowsonkb">https://github.com/crowsonkb</a>  https://arxiv.org/abs/2204.08583
+<br>- NerdyRodent : https://github.com/nerdyrodent/VQGAN-CLIP</p>
 <h1>AKNOWLEDGEMENTS</h1>
 <p><code>@inproceedings{Karras2020ada,
   title     = {Training Generative Adversarial Networks with Limited Data},
   author    = {Tero Karras and Miika Aittala and Janne Hellsten and Samuli Laine and Jaakko Lehtinen and Timo Aila},
   booktitle = {Proc. NeurIPS},
   year      = {2020}
-}</code>
+}</code><br>
 <code>@misc{esser2020taming,
-      title={Taming Transformers for High-Resolution Image Synthesis}, 
+      width="800" title={Taming Transformers for High-Resolution Image Synthesis}, 
       author={Patrick Esser and Robin Rombach and Björn Ommer},
       year={2020},
       eprint={2012.09841},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
-}</code>
+}</code><br>
 <code>@misc{https://doi.org/10.48550/arxiv.2103.00020,
   doi = {10.48550/ARXIV.2103.00020},
   url = {https://arxiv.org/abs/2103.00020},
@@ -112,7 +112,7 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
   publisher = {arXiv},
   year = {2021},
   copyright = {arXiv.org perpetual, non-exclusive license}
-}</code></p>
+}</code><br></p>
 <h1>ATTRIBUTION</h1>
 <ul>
 <li>the following icons were initially apart of the training dataset :</li>
