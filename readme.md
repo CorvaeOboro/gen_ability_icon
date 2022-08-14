@@ -1,6 +1,6 @@
 # GEN_ABILITY_ICON
 create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
-- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons) |  [INSTALL](https://github.com/CorvaeOboro/gen_ability_icon#install)
+- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm) |  [INSTALL](https://github.com/CorvaeOboro/gen_ability_icon#install)
 - procedurally generated 3d renders using  [SideFX's Houdini](https://www.sidefx.com/) tools and [PDG TOPs](https://www.sidefx.com/products/pdg/) 
 - mutated by text-to-image guided neural networks (  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers) )
 - cultivated dataset trained generative adversarial network to explore (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
@@ -11,8 +11,8 @@ create ability icon images , a circular workflow of refinement using procgen aug
 
 # IMAGE DATASET
 - a synthetic image dataset of circular magic ability icons
-- collection of favored ability icons generated free to all 
-- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://github.com/CorvaeOboro/gen_ability_icon/tree/master/icons#icons)
+- collection of favored ability icons generated free to all ( CC0 )
+- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm)
 
 # STYLEGAN2ADA CHECKPOINT
 - a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.
@@ -31,10 +31,10 @@ create ability icon images , a circular workflow of refinement using procgen aug
 ![00_icon_procgen_comp](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_procgen_comp.jpg?raw=true "00_icon_procgen_comp")
 
 # GUIDED MUTATION / REMIXING
-- with initial set of procgen selected , expand the dataset and alter using various techniques :
--  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input image , similar to text based styletransfer . 
+with initial set of procgen generated , expand the dataset by alteration using various techniques :
+-  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input init image , like a text based styletransfer . 
 - text prompts used for text guided image mutation included in [prompts_list.txt](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt)
-- IMAGE_COLLAGE.py - given a folder of images randomly composites them with randomized hue / brightness / normalization 
+- IMAGE_COLLAGE.py - given folder of images randomly layer with randomized hue / brightness / normalization 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
 
