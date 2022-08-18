@@ -1,6 +1,6 @@
 # GEN_ABILITY_ICON
 create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
-- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm) |  [INSTALL](https://github.com/CorvaeOboro/gen_ability_icon#install)
+- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm) |  [INSTALL](#install)
 - procedurally generated 3d renders using  [SideFX's Houdini](https://www.sidefx.com/) tools and [PDG TOPs](https://www.sidefx.com/products/pdg/) 
 - mutated by text-to-image guided neural networks (  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers) )
 - cultivated dataset trained generative adversarial network to explore (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
