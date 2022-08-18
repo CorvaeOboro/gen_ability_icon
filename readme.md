@@ -34,7 +34,7 @@ create ability icon images , a circular workflow of refinement using procgen aug
 with initial set of procgen generated , expand the dataset by alteration using various techniques :
 -  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input init image , like a text based styletransfer . 
 - text prompts used for text guided image mutation included in [prompts_list.txt](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt)
-- IMAGE_COLLAGE.py - given folder of images randomly layer with randomized hue / brightness / normalization 
+- gen_ability_icon_collage.py - given folder of images randomly layer with randomized hue / brightness / normalization 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
 
@@ -58,7 +58,6 @@ git clone 'https://github.com/CompVis/taming-transformers'
 mkdir checkpoints
 curl -L -o checkpoints/vqgan_imagenet_f16_16384.yaml -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fconfigs%2Fmodel.yaml&dl=1' #ImageNet 16384
 curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-heidelberg.de/d/a7530b09fed84f80a887/files/?p=%2Fckpts%2Flast.ckpt&dl=1' #ImageNet 16384
-
 ```
 
 # WORKFLOW
@@ -69,6 +68,22 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 - train stylegan2 network , then generate seeds from trained checkpoint
 - cultivate the complete dataset thru selection and art direction adjustments 
 - repeat to expand and refine by additional text guided mutation , retraining , regenerating
+
+```python
+#procgen houdini pdg render
+python houdini/GEN_ABILITY_ICON_houdini_render.py
+
+#vqgan+clip 
+python gen_ability_icon_vqganclip.py  
+python gen_ability_icon_vqganclip.py --input_path="./icons/" --input_prompt_list="prompts_list.txt" 
+
+#collage 
+python gen_ability_icon_collage.py
+python gen_ability_icon_collage.py --input_path="./icons/" --resolution=256
+
+#stylegan2ada generate 
+python gen_ability_icon_stylegan2ada_generate.py
+```
 
 # THANKS
 many thanks to 
