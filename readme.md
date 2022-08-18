@@ -69,9 +69,9 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 - cultivate the complete dataset thru selection and art direction adjustments 
 - repeat to expand and refine by additional text guided mutation , retraining , regenerating
 
-```python
-#procgen houdini pdg render
-python houdini/GEN_ABILITY_ICON_houdini_render.py
+```.bash
+#procgen houdini pdg render , requires houdini and zenv tools
+python gen_ability_icon_houdini_render.py
 
 #vqgan+clip 
 python gen_ability_icon_vqganclip.py  
