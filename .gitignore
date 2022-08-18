@@ -20,3 +20,5 @@
 **/venv/**
 **/taming/**
 **/output/**
+**/houdini/geo/**
+**/houdini/render/**
