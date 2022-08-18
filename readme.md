@@ -70,18 +70,18 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 - repeat to expand and refine by additional text guided mutation , retraining , regenerating
 
 ```.bash
-#procgen houdini pdg render , requires houdini and zenv tools
+# procgen houdini pdg render , requires houdini and zenv tools
 python gen_ability_icon_houdini_render.py
 
-#vqgan+clip 
+# vqgan+clip text2image batch alter from init image set
 python gen_ability_icon_vqganclip.py  
 python gen_ability_icon_vqganclip.py --input_path="./icons/" --input_prompt_list="prompts_list.txt" 
 
-#collage 
+# collage from generated icon set
 python gen_ability_icon_collage.py
 python gen_ability_icon_collage.py --input_path="./icons/" --resolution=256
 
-#stylegan2ada generate 
+# stylegan2ada generate from trained icon checkpoint
 python gen_ability_icon_stylegan2ada_generate.py
 ```
 
