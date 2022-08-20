@@ -1,6 +1,6 @@
 # GEN_ABILITY_ICON
 create ability icon images , a circular workflow of refinement using procgen augmented by neural networks .
-- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm) |  [INSTALL](#install)
+- [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm) |  [INSTALL](#install) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0) | [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/CorvaeOboro/gen_ability_icon)
 - procedurally generated 3d renders using  [SideFX's Houdini](https://www.sidefx.com/) tools and [PDG TOPs](https://www.sidefx.com/products/pdg/) 
 - mutated by text-to-image guided neural networks (  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers) )
 - cultivated dataset trained generative adversarial network to explore (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
@@ -17,7 +17,7 @@ create ability icon images , a circular workflow of refinement using procgen aug
 # STYLEGAN2ADA CHECKPOINT
 - a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.
 - there is much to explore in 512-dimensional latent space , may you find favored .
-- create new seeds using this notebook : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0)
+- create new seeds using this notebook : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/CorvaeOboro/gen_ability_icon)
 - [DOWNLOAD CHECKPOINT PKL](https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20220801/gen_ability_icon_stylegan2ada_20220801.pkl ) |  [GENERATE USING COLAB](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0)
 
 # PROCGEN
