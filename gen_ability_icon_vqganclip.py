@@ -730,13 +730,13 @@ vqgan_model_path = "./checkpoints/"
 try: 
     os.mkdir(vqgan_model_path) 
 except OSError as error: 
-    print(error)  
+    print(vqgan_model_path + " EXISTS")  
     
 save_output_path = "./output/"
 try: 
     os.mkdir(save_output_path) 
 except OSError as error: 
-    print(error)  
+    print(save_output_path + " EXISTS")  
 
 model_download={
   "vqgan_imagenet_f16_1024":
