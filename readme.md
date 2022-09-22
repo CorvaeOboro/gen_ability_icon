@@ -16,7 +16,6 @@ create ability icon images , a circular workflow of refinement using procgen aug
 
 # STYLEGAN2ADA CHECKPOINT
 - a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.
-- there is much to explore in 512-dimensional latent space , may you find favored .
 - create new seeds using this notebook : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/CorvaeOboro/gen_ability_icon)
 - [DOWNLOAD CHECKPOINT PKL](https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20220801/gen_ability_icon_stylegan2ada_20220801.pkl ) |  [GENERATE USING COLAB](https://colab.research.google.com/drive/1ZjLNer1pg6HluzxknAtPu0fQ2wDCvsxQ?authuser=0)
 
@@ -34,7 +33,7 @@ create ability icon images , a circular workflow of refinement using procgen aug
 with initial set of procgen generated , expand the dataset by alteration using various techniques :
 -  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input init image , like a text based styletransfer . 
 - text prompts used for text guided image mutation included in [prompts_list.txt](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt)
-- gen_ability_icon_collage.py - given folder of images randomly layer with randomized hue / brightness / normalization 
+- gen_ability_icon_collage.py - folder of images is randomly layered and randomized hue / brightness / normalized 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
 
