@@ -83,6 +83,9 @@ python gen_ability_icon_collage.py --input_path="./icons/" --resolution=256
 # stylegan2ada generate from trained icon checkpoint
 python gen_ability_icon_stylegan2ada_generate.py
 ```
+# CHANGELIST
+- 20221012 = stylegan2ada checkpoint gen 5 , includes stablediffusion variants 
+- 20220801 = stylegan2ada checkpoint gen 4 , including procgen , collage , vqgan+clip variants 
 
 # THANKS
 many thanks to 
