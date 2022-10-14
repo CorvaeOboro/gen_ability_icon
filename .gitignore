@@ -23,3 +23,5 @@
 **/houdini/geo/**
 **/houdini/render/**
 **/huggingface/**
+*00_NOTES.txt
+*00_setup.sh

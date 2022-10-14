@@ -8,7 +8,7 @@ from os.path import abspath
 import requests
 
 # DOWNLOAD ABILITY ICON trained network checkpoint pkl
-network="./datasets/gen_ability_icon_stylegan2ada_20220801.pkl"
+network="./datasets/gen_ability_icon_stylegan2ada_20221012.pkl"
 if path.exists(network) :
         print("EXISTING PKL FOUND == " + str(network))
 else:
@@ -19,7 +19,7 @@ else:
                 print(error)  
         network_absolute = abspath(network)
         print("GEN ABILITY PKL MISSING  == " + str(network_absolute))
-        network_url = '''https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20220801/gen_ability_icon_stylegan2ada_20220801.pkl'''
+        network_url = '''https://github.com/CorvaeOboro/gen_ability_icon/releases/download/gen_ability_icon_stylegan2ada_20221012/gen_ability_icon_stylegan2ada_20221012.pkl'''
         print("DOWNLOAD PKL  == " + str(network_url))
         response = requests.get(network_url)
         print("DOWNLOADING....")
