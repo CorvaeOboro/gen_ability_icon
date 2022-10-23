@@ -5,14 +5,14 @@ create ability icon images , a circular workflow of refinement using procgen aug
 - mutated by text-to-image guided neural networks (  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers) )
 - cultivated dataset trained generative adversarial network to explore (  [STYLEGAN2ADA](https://github.com/NVlabs/stylegan2-ada) )
 
-![00_icon_gen_20220407_comp](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true "00_icon_gen_20220407_comp")
-
 ![00_icon_gen2_compA](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/gen_ability_icon_process.jpg?raw=true "00_icon_gen2_compA")
 
 # IMAGE DATASET
 - a synthetic image dataset of circular magic ability icons
 - collection of favored ability icons generated free to all ( CC0 )
 - [DOWNLOAD ICONS](https://github.com/CorvaeOboro/gen_ability_icon/archive/refs/heads/master.zip) |  [VIEW ICONS](https://corvaeoboro.github.io/gen_ability_icon/gen_ability_icon_all.htm)
+
+![00_icon_gen_20220407_comp](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen4_vqB_comp_0.jpg?raw=true "00_icon_gen_20220407_comp")
 
 # STYLEGAN2ADA CHECKPOINT
 - a stylegan2 network checkpoint trained on synthetic 256x256 images of curated generated icons.
@@ -38,6 +38,10 @@ with initial set of procgen generated , expand the dataset by alteration using v
 - gen_ability_icon_collage.py - folder of images is randomly layered and randomized hue / brightness / normalized 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
+- vqgan+clip
+
+![00_icon_gen_stablediffusion_20221005_comp](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen_stablediffusion_20221005_comp.jpg?raw=true "00_icon_gen_stablediffusion_20221005_comp")
+- stable diffusion
 
 # INSTALL
 
