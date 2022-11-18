@@ -33,9 +33,9 @@ create ability icon images , a circular workflow of refinement using procgen aug
 
 # GUIDED MUTATION / REMIXING
 with initial set of procgen generated , expand the dataset by alteration using various techniques :
--  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input init image , like a text based styletransfer . 
+-  [VQGAN+CLIP](https://github.com/CompVis/taming-transformers)  - text-to-image guided modification of input init image 
 - text prompts used for text guided image mutation included in [prompts_list.txt](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/prompts_list.txt)
-- gen_ability_icon_collage.py - folder of images is randomly layered and randomized hue / brightness / normalized 
+- [gen_ability_icon_collage.py](https://github.com/CorvaeOboro/gen_ability_icon/blob/master/gen_ability_icon_collage.py)  - input set of images is randomly layered with random hue / brightness / normalized 
 
 ![00_icon_gen2_compB](https://raw.githubusercontent.com/CorvaeOboro/gen_ability_icon/master/docs/00_icon_gen2_compB.jpg?raw=true "00_icon_gen2_compB")
 - vqgan+clip
@@ -46,9 +46,11 @@ with initial set of procgen generated , expand the dataset by alteration using v
 # INSTALL
 
 ```.bash
-# create anaconda env from included environment.yml
+# clone GEN_ABILITY_ICON
 git clone 'https://github.com/CorvaeOboro/gen_ability_icon'
 cd gen_ability_icon
+
+# create anaconda env from included environment.yml
 conda env create --prefix venv -f environment.yml
 conda activate venv
 
@@ -67,28 +69,31 @@ curl -L -o checkpoints/vqgan_imagenet_f16_16384.ckpt -C - 'https://heibox.uni-he
 
 # WORKFLOW
 - generate procgen renders from houdini , selecting favored renders
-- mutate those renders via text guided VQGAN+CLIP 
-- combine the renders and mutants via random collaging 
-- select the favored icons to create a stylegan2 dataset 
-- train stylegan2 network , then generate seeds from trained checkpoint
-- cultivate the complete dataset thru selection and art direction adjustments 
-- repeat to expand and refine by additional text guided mutation , retraining , regenerating
-
 ```.bash
 # procgen houdini pdg render , requires houdini and zenv tools
 python gen_ability_icon_houdini_render.py
-
+```
+- mutate those renders via text guided VQGAN+CLIP 
+```.bash
 # vqgan+clip text2image batch alter from init image set
 python gen_ability_icon_vqganclip.py  
 python gen_ability_icon_vqganclip.py --input_path="./icons/" --input_prompt_list="prompts_list.txt" 
-
+```
+- combine the renders and mutants via random collaging 
+```.bash
 # collage from generated icon set
 python gen_ability_icon_collage.py
 python gen_ability_icon_collage.py --input_path="./icons/" --resolution=256
-
+```
+- select the favored icons to create a stylegan2 dataset 
+- train stylegan2 network , then generate seeds from trained checkpoint
+```.bash
 # stylegan2ada generate from trained icon checkpoint
 python gen_ability_icon_stylegan2ada_generate.py
 ```
+- cultivate the complete dataset thru selection and art direction adjustments 
+- repeat to expand and refine by additional text guided mutation , retraining , regenerating
+
 # CHANGELIST
 - 20221012 = stylegan2ada checkpoint gen 5 , includes stablediffusion variants 
 - 20220801 = stylegan2ada checkpoint gen 4 , including procgen , collage , vqgan+clip variants 
